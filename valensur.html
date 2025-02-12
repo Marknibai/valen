@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+            margin: 50px;
+        }
+        #ring-box, #response-box {
+            display: none;
+            margin-top: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #ff1e4d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Your Name:</h2>
+        <input type="text" id="nameInput" placeholder="Your Name">
+        <button onclick="checkName()">Submit</button>
+        
+        <div id="ring-box">
+            <h3>HEHEHE! Will You Be My Valentine? or else ipa kidnap ka naho😡💍❤️</h3>
+            <img src="/8862f545339ecb766cf10c367fcb2a30.jpg" alt="og broken ang picture huna hunaa ra imong ka gwapa" width="100px">
+            <img src="/fd2ccca02efe9878ce4fc278253ccf60_1726487193167_0.webp.jpg" alt="og broken sab ni nga picture sagdi ra basta dili kita uhaha😆" width="200px">
+            
+            <div id="response-box">
+                <h3>Tubag!</h3>
+                <button onclick="answerYes()">Yes</button>
+                <button onclick="answerNo()">No</button>
+            </div>
+            
+            <h3 id="final-message"></h3>
+        </div>
+    </div>
+
+    <script>
+        function checkName() {
+            const enteredName = document.getElementById("nameInput").value.trim().toLowerCase();
+            const gfName = "Marian";
+            
+            if (enteredName === gfName.toLowerCase()) {
+                document.getElementById("ring-box").style.display = "block";
+                document.getElementById("response-box").style.display = "block";
+            } else {
+                alert("Oops! Try again, sweetheart or else iyoton taka! ❤️");
+            }
+        }
+
+        function answerYes() {
+            document.getElementById("final-message").innerText = "Yay! Thank you, my love! ❤️💍 Paisa be HAHAHA";
+        }
+
+        function answerNo() {
+            document.getElementById("final-message").innerText = "Ouch! 😭 Barang ka sakin💀";
+        }
+    </script>
+
+</body>
+</html>
